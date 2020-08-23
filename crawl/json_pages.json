@@ -1,0 +1,1023 @@
+[{
+"_id":"1",
+"urls":["http://www.senado.gov.co/index.php/el-senado/senadores?lastletter=Todos#modazdirectory"],
+"entidad":"senado",
+"t_estructura":"2",
+"contenedores":".//div[@class='modazdirectory__result modazdirectory__layout-misc_off']",
+"info":{
+"nombre":".//div/h3[text()]",
+"foto":".//img",
+"email":".//*[@id='contact-email']/a",
+"telefono":".//*[@id='contact-telephone'][text()]",
+"oficina":".//*[@id='contact-street'][text()]",
+"comision":".//div/p[2][text()]",
+"partido_politico":".//div/p[1][text()]",
+"depto":".//*[@id='contact-position'][text()]",
+"redes":".//*[@id='contact-misc']/a",
+"skype":".//*[@id='contact-skype']/a",
+"website":".//*[@id='contact-website']/a"
+}},
+{
+"_id":"2",
+"urls":["www.camara.gov.co/representantes"],
+"entidad":"Camara de Representantes",
+"t_estructura":"4",
+"enlaces":".//li[@class='mapplic-list-location mapplic-list-shown']",
+"popup":".//div[@class='mapplic-popup-link']",
+"info":{
+"nombre":"//div[@class='field field--name-name field--type-string field--label-hidden field__item'][text()]",
+"foto":".//div[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[1]/div/div/img",
+"perfil":".//div[@class='panel-body']/div/div[@class='field__item'][text()]",
+"email":".//div[@class='atributocorreo']/div/div/a",
+"telefono":".//div[@class='atributotel']/div/div[@class='field__item'][text()]",
+"oficina":".//div[@class='atributodir']/div/div[@class='field__item'][text()]",
+"comision_constitucional":".//*[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[2]/div[4]/div/div/div/div/div/span[text()]|.//*[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[2]/div[5]/div/div/div/div/div/span[text()]",
+"partido_politico":".//span[@class='partpolit']/span/a",
+"depto":".//div[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[2]/div[3]/div/a",
+"twitter":".//div[@id='block-gavias-vinor-content']/div/div[2]/div[4]/div[1]/a",
+"periodo_constitucional":"//div[@class='field__items']/div[text()]",
+"legislatura":".//div[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[2]/div[2]/div/div[text()]",
+"votos":".//div[@id='block-gavias-vinor-content']/div/div[2]/div[2]/div[2]/div[6]/div[2]/div/div[2][text()]"
+}},
+{
+"_id":"3",
+"urls":["http://www.cortesuprema.gov.co/corte/index.php/directorio-telefonico/"],
+"entidad":"Corte Suprema",
+"t_estructura":"2",
+"contenedores":".//div[@class='article-content entry-content']/table/tbody/tr[position()>1]",
+"info":{
+"nombre":".//td[2][text()]",
+"telefono":".//td[3][text()]",
+"cargo":".//td[1][text()]"
+}},
+{
+"_id":"5",
+"urls":["http://www.despachospublicos.com/tipos-de-entidad/24/administraci%C3%B3n-judicial/consejo-superior-de-la-judicatura"],
+"entidad":"Consejo superior de la judicatura",
+"t_estructura":"2",
+"contenedores":".//div[@id='node-2650']/div/div[1]/table/tbody/tr[position()>1]",
+"info":{
+"nombre":".//td[2][text()]",
+"telefono":".//td[3]/div[text()]",
+"cargo":".//td[1][text()]"
+}},
+{
+"_id":"6",
+"urls":["http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/vicefiscal-general-de-la-nacion/","http://www.fiscalia.gov.co/colombia/la-entidad/el-fiscal/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/director-nacional-de-politicas-y-planeacion/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/director-de-planeacion-y-desarrollo/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/jefe-de-la-oficina-de-divulgacion-y-prensa/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/director-de-control-interno/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/jefe-oficina-de-veeduria-y-control-disciplinario-interno/","http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/director-nacional-del-cuerpo-tecnico-de-investigacion-cti/"],
+"entidad":"Fiscalia",
+"t_estructura":"1",
+"info":{
+"nombre":".//figure[@id='attachment_20787']/figcaption/center[text()]|.//figure[@id='attachment_20787']/figcaption/center/strong[text()]",
+"foto":".//figure[@id='attachment_20787']/a/img",
+"perfil":".//div[@class='td-page-content']/p[text()]|.//div[@class='wpb_wrapper']/p[text()]",
+"cargo":".//h1[@class='entry-title td-page-title']/span[text()]",
+"fecha_actualizacion":".//div[@id='td-outer-wrap']/div[4]/div[2]/div/div[2][text()]"
+}},
+{
+"_id":"11",
+"urls":["http://www.fiscalia.gov.co/colombia/la-entidad/equipo-de-trabajo/director-de-asuntos-internacionales/"],
+"t_estructura":"1",
+"entidad":"Fiscalia",
+"info":{
+"nombre":".//figure[@id='attachment_9626']/figcaption/center/text()",
+"foto":".//figure[@id='attachment_9626']/img",
+"perfil":".//div[@class='td-page-content']/p[text()]",
+"cargo":".//h1[@class='entry-title td-page-title']/span[text()]",
+"fecha_actualizacion":".//div[@id='td-outer-wrap']/div[4]/div[2]/div/div[2][text()]"
+}},
+{
+"_id":"16",
+"urls":["http://www.fiscalia.gov.co/colombia/director-de-altos-estudios/"],
+"entidad":"Fiscalia",
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='td-page-content']/p/em/strong[text()]",
+"perfil":".//div[@class='td-page-content']/p[position() >1][text()]",
+"cargo":".//div[@class='td-page-header']/h1/span[text()]"
+}},
+{
+"_id":"18",
+"urls":["https://www.supersalud.gov.co/es-co/superintendencia/nuestra-entidad/directorio-de-funcionarios"],
+"t_estructura":"3",
+"entidad":"Superintendencia de salud",
+"enlaces":"https://www.supersalud.gov.co/es-co/Paginas/Talento Humano/funcionarios-detalle.aspx?lid=",
+"lim_inf":"646",
+"lim_sup":"1376",
+"info":{
+"nombre":".//table/tbody/tr[1]/td[2]/p[text()]",
+"email":".//table/tbody/tr[5]/td[2]/p[text()]",
+"telefono":".//table/tbody/tr[6]/td[2]/p[text()]",
+"pais_nacimiento": ".//table/tbody/tr[8]/td[2]/p[text()]",
+"ciudad_nacimiento": ".//table/tbody/tr[10]/td[2]/p[text()]",
+"area":".//table/tbody/tr[2]/td[2]/p[text()]",
+"cargo":".//table/tbody/tr[3]/td[2]",
+"orden":".//table/tbody/tr[4]/td[2]/p[text()]",
+"tipo_vinculacion":".//table/tbody/tr[7]/td[2]/p[text()]",
+"sigep":".//table/tbody/tr[12]/td[2]/p/a",
+"fecha_actualizacion":".//div[@id='fechalayout'][text()]"
+}},
+{
+"_id":"19",
+"urls":["https://www.supersalud.gov.co/es-co/superintendencia/nuestra-entidad/el-superintendente"],
+"t_estructura":"1",
+"info":{
+"entidad":"Superintendencia de salud",
+"nombre":"substring-before(.//div[@id='ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField']/h3[text()],',')",
+"perfil":".//div[@id='ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField']/p[text()]",
+"cargo":"substring-after(.//div[@id='ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField']/h3[text()],',')",
+"fecha_actualizacion":".//span[@id='dvFecha'][text()]"
+}},
+{
+"_id":"20",
+"urls":["https://www.superfinanciera.gov.co/jsp/publicaciones.jsf?id=20480"],
+"t_estructura":"4",
+"entidad":"Superintendencia financiera",
+"enlaces":".//form[@id='form1']/div[3]/p",
+"info":{
+"nombre":".//span/strong|.//strong/span",
+"perfil":".//a[@title='Hoja de Vida']",
+"cargo":"substring-before(substring-after(.//form[@id='form1']/div[3]/p[text()],'('),')')",
+"fecha_actualizacion":".//div[@id='zona6']/p[text()]"
+}},
+{
+"_id":"21",
+"urls":["https://www.supervigilancia.gov.co/publicaciones/537/el-secretario-general/"],
+"t_estructura":"1",
+"entidad":"Superintendencia de vilgilancia",
+"info":{
+"foto":".//div[@id='infoPrincipal']/div[2]/div/div[1]/img",
+"nombre":"substring-before(.//div[@id='infoPrincipal']/div[2]/div/div[2]/p[text()],',')",
+"perfil":".//div[@id='infoPrincipal']/div[2]/div/div[2]/p[text()]",
+"cargo":".//div[@id='infoPrincipal']/h1[text()]",
+"fecha_actualizacion":".//div[@id='infoPrincipal']/div[2]/div/div[3][text()]"
+}},
+{
+"_id":"22",
+"urls":["https://www.ssf.gov.co/directorio-de-contratistas"],
+"t_estructura":"2",
+"entidad":"Superintendencia",
+"contenedores":".//tbody[@class='buscarcc2017']/tr",
+"info":{
+"nombre":".//td[2]/div/span/span[text()]",
+"email":".//td[5]/div/span/span/a",
+"cedula":".//td[3]/div/span/span[text()]",
+"area":"/td[4]/p/span[text()]",
+"sigep":".//td[6]/div/span/span/a",
+"fecha_actualizacion":".//div[@class='ultact']/a"
+}},
+{
+"_id":"23",
+"urls":["https://www.ssf.gov.co/transparencia/estructura-org%C3%A1nica-y-talento-humano/directorio-de-informacion-de-servidores-publicos-y-contratistas/directorio-de-funcionarios"],
+"t_estructura":"2",
+"entidad":"Superintendencia",
+"contenedores":".//tbody[@class='buscarcc2017']/tr",
+"info":{
+"nombre":".//td[1]/div/span/span[text()]",
+"email":".//td[5]/div/span/span[text()]|.//td[5]/div/span[text()]",
+"area":".//td[2]/div/span/span[text()]",
+"cargo":".//td[3]/p/span/span[text()]|.//td[3]/div/span/span[text()]",
+"fecha_actualizacion":".//div[@class='ultact']/a"
+}},
+{
+"_id":"24",
+"urls":["https://www.ssf.gov.co/transparencia/estructura-org%C3%A1nica-y-talento-humano/directorio-de-informacion-de-servidores-publicos-y-contratistas/directivos"],
+"entidad":"Superintendencia",
+"t_estructura":"2",
+"contenedores":".//table[@class='layoutColumn ibmDndColumn component-container id-Z7_JOK0H302MGV2F0AJ47993L30S2 layoutNode']/tbody/tr/td/div",
+"info":{
+"nombre":".//div/p[@class='name'][text()]",
+"email":".//div/p[@class='ap'][4][text()]",
+"lugar_nacimiento":".//div/p[@class='ap'][3][text()]",
+"experiencia":".//div/p[@class='ap'][2][text()]",
+"cargo":".//h1[text()]",
+"perfil":".//div/p[@class='ap'][1][text()]"
+}},
+{
+"_id":"25",
+"urls":["http://www.supersociedades.gov.co/nuestra_entidad/despacho_superintendente/Paginas/perfil_directivos.aspx"],
+"t_estructura":"4",
+"entidad":"Superintendencia de sociedades",
+"enlaces":".//table[@summary='Directivos']/tbody/tr/td[3]/div/a",
+"info":{
+"nombre":"substring-after(.//table[@class='ms-formtable']/tbody/tr[1]/td[2][text()],'-')",
+"foto":".//table[@class='ms-formtable']/tbody/tr[7]/td[2]/img",
+"lugar_nacimiento":".//table[@class='ms-formtable']/tbody/tr[2]/td[2][text()]",
+"cargo":"substring-before(.//table[@class='ms-formtable']/tbody/tr[1]/td[2][text()],'-')",
+"experiencia":".//table[@class='ms-formtable']/tbody/tr[5]/td[2]/div/div/div/p[text()]",
+"estudio":".//table[@class='ms-formtable']/tbody/tr[4]/td[2]/div/div/div[text()]",
+"orden":".//table[@class='ms-formtable']/tbody/tr[6]/td[2][text()]",
+"fecha_mod":".//span[@id='ctl00_ctl35_g_92fba8d9_5106_4f98_bfe1_28464e73722e_ctl00_toolBarTbl_RptControls_ctl00_ctl00_ctl01'][text()]"
+}},
+{
+"_id":"26",
+"urls":["http://www.supersociedades.gov.co/nuestra_entidad/despacho_superintendente/Paginas/default.aspx"],
+"t_estructura":"1",
+"entidad":"Superintendencia de sociedades",
+"info":{
+"nombre":".//div[@id='ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField']/p[3]/span/strong[text()]",
+"foto":".//div[@id='ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichImageField']/div/img",
+"perfil":".//div[@id='ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField']/p[4]/span[text()]"
+}},
+{
+"_id":"27",
+"urls":["http://www.superservicios.gov.co/Institucional/Talento-Humano/Perfiles-de-nivel-directivo"],
+"t_estructura":"2",
+"entidad":"Superintendencia de servicios",
+"enlaces":".//table[@class='default']/tbody/tr/td",
+"info":{
+"nombre":".//a[1][text()]",
+"email":".//a[2]",
+"telefono":".//text()[5]",
+"area":".//span[text()]",
+"cargo":".//text()[4]",
+"sigep":".//a[1]"
+}},
+{
+"_id":"28",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/superintendente-delegada-de-puertos"],
+"t_estructura":"1",
+"entidad":"superintendencia de Transporte",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/strong/span/strong[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[6][text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span/strong[text()]"
+}},
+{
+"_id":"29",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/superintendente-delegado-de-concesiones-e-infraestructura"],
+"t_estructura":"1",
+"entidad":"superintendencia de Transporte",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/strong/span/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[7]/span[text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span[text()]"
+}},
+{
+"_id":"30",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/superintendente-delegado-de-transito-y-transporte-terrestre-automotor"],
+"entidad":"superintendencia de Transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/strong/span/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[7]/span[text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong[2]/span[text()]"
+}},
+{
+"_id":"31",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/jefe-oficina-juridica"],
+"entidad":"superintendencia de Transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/strong/span/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/p[1]/strong[2]/span/span/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[5][text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span[text()]"
+}},
+{
+"_id":"32",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/jefe-oficina-asesora-de-planeacion"],
+"entidad":"superintendencia de Transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/span/strong/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/p[1]/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[5][text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span[text()]"
+}},
+{
+"_id":"33",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/jefe-control-interno"],
+"entidad":"superintendencia de Transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/span/strong/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[6]/span[text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span[text()]"
+}},
+{
+"_id":"34",
+"urls":["http://www.supertransporte.gov.co/index.php/la-entidad/perfiles-directivos/secretaria-general"],
+"entidad":"superintendencia de Transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div/table/tbody/tr[2]/td[3]/div/p[2]/span/strong/span[text()]",
+"foto":".//div/table/tbody/tr[2]/td[3]/div/img",
+"perfil":".//div/table/tbody/tr[2]/td[3]/div/p[7]/span/span[text()]",
+"cargo":".//div/table/tbody/tr[2]/td[3]/div/p[3]/strong/span[text()]"
+}},
+{
+"_id":"35",
+"entidad":"Superintendencia solidaria",
+"urls":["http://www.supersolidaria.gov.co/es/nuestra-entidad/1funcionarios"],
+"t_estructura":"2",
+"contenedores":".//table[@class='views-view-grid cols-1']/tbody/tr",
+"info":{
+"nombre":".//td/article/header/h2/a[text()]",
+"foto":".//td/article/div/div[@class='field field-name-field-foto field-type-image field-label-hidden']/div/div/a/img",
+"email":".//td/article/div/div[@class='field field-name-field-correo-email-funcionario field-type-text field-label-above']/div[2]/div[text()]",
+"telefono":".//td/article/div/div[@class='field field-name-field-telefono-funcionario field-type-text field-label-above']/div[2]/div[text()]",
+"cargo":".//td/article/div/div[@class='field field-name-field-cargo-funcionario field-type-text field-label-above']/div[2]/div[text()]"
+}},
+{
+"_id":"36",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/despacho-superintendente-de-industria-y-comercio"],
+"t_estructura":"1",
+"info":{
+"nombre":".//*[@id='node-4095']/div/div/div/div/h3[text()]",
+"foto":".//*[@id='node-4095']/div/div/div/div/p[1]/img",
+"perfil":".//*[@id='node-4095']/div/div/div/div/p[2] al p[7][text()]",
+"cargo":".//*[@id='SIC_interno_00']/div/h1[text()]"
+}},
+{
+"_id":"37",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/despacho-superintendente-de-industria-y-comercio"],
+"t_estructura":"2",
+"contenedores":".//div[@class='table-responsive']/table/tbody/tr[position()>1]",
+"info":{
+"nombre":".//td[2][text()]",
+"email":".//td[4]/a",
+"telefono":".//td[3]/p[text()]",
+"cargo":".//*[@id='SIC_interno_00']/div/h1[text()]"
+}},
+{
+"_id":"38",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/asesores-despacho"],
+"t_estructura":"2",
+"contenedores":".//div[@class='field-item even']/div[@class='row']",
+"info":{
+"nombre":".//div/h5[text()]",
+"foto":".//div/p/img",
+"perfil":".//div[@class='col-md-8'][text()]",
+"cargo":".//*[@id='SIC_interno_00']/div/h1[text()]"
+}},
+{
+"_id":"39",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/secretaria-general"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//*[@id='node-4109']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"40",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-para-la-proteccion-del-consumidor"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//*[@id='node-4114']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"41",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-para-la-proteccion-de-la-competencia"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//*[@id='node-4111']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"42",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-para-la-propiedad-industrial"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//*[@id='node-4112']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"43",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-para-la-proteccion-de-datos-personales"],
+"t_estructura":"1",
+"info":{
+"nombre":".//*[@id='node-4116']/div/div/div/div/div/div[1]/h4[text()]",
+"foto":".//*[@id='node-4116']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//*[@id='node-4116']/div/div/div/div/div/div[2]/h4[text()]"
+}},
+{
+"_id":"44",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-reglamentos-tecnicos-y-metrologia-legal"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//img[@class='img']",
+"perfil":".//div[@class='p1']/p[text()]",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"45",
+"entidad":"Superintendencia de industria y comercio",
+"urls":["http://www.sic.gov.co/delegatura-de-asuntos-jurisdiccionales"],
+"t_estructura":"1",
+"info":{
+"nombre":".//h3[@class='SIC-funcionario-titulo'][text()]",
+"foto":".//*[@id='node-4115']/div/div/div/div/div/div[1]/p/img",
+"perfil":".//div[@class='p1']/p[1][text()]",
+"email":".//ul[@class='list-group']/li[2]/a",
+"telefono":".//ul[@class='list-group']/li[1][text()]",
+"cargo":".//h4[@class='SIC-funcionario-c'][text()]"
+}},
+{
+"_id":"46",
+"entidad":"Ministerio de ambiente",
+"urls":["http://www.minambiente.gov.co/index.php/ministerio/directorio"],
+"t_estructura":"2",
+"contenedores":".//div[@id='contenedor-directorio']/div",
+"info":{
+"nombre":".//div/h2[text()]",
+"foto":".//div/img",
+"perfil":".//div/div[starts-with(@id, 'texto-director')]/p[text()]",
+"cargo":".//div/div[@id='cargo'][text()]"
+}},
+{
+"_id":"47",
+"entidad":"Ministerio de agricultura",
+"urls":["https://www.minagricultura.gov.co/ministerio/Paginas/Directorio.aspx"],
+"t_estructura":"2",
+"contenedores":".//table[@class='ms-rteTable-1']/tbody/tr[@class='ms-rteTableEvenRow-1'][position() > 1]",
+"info":{
+"nombre":".//td[2][text()]",
+"telefono":".//td[3][text()]",
+"extension":".//td[4][text()]",
+"cargo":".//td[1][text()]"
+}},
+{
+"_id":"48",
+"entidad":"Ministerio de agricultura",
+"urls":["https://www.minagricultura.gov.co/ministerio/Paginas/Viceministro-de-Desarrollo-Rural.aspx"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='pad']/div/div/h1[1]/span[text()]",
+"foto":".//div[@class='ms-rtestate-field']/img",
+"perfil":".//div[@class='pad']/div/div/p[text()]",
+"cargo":".//div[@class='pad']/h1[text()]"
+}},
+{
+"_id":"49",
+"urls":["https://www.minagricultura.gov.co/ministerio/Paginas/Viceministro-de-Asuntos-Agropecuarios.aspx"],
+"t_estructura":"1",
+"entidad":"Ministerio de agricultura",
+"info":{
+"nombre":".//div[@class='pad']/div/h2[text()]",
+"foto":".//div[@class='pad']/div/h2/img",
+"perfil":".//*[@id='ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField']/div/div[position() < 3][text()]",
+"cargo":".//div[@class='pad']/h1[text()]"
+}},
+{
+"_id":"50",
+"urls":["https://www.minagricultura.gov.co/ministerio/Paginas/Secretario-General.aspx"],
+"t_estructura":"1",
+"info":{
+"entidad":"Ministerio de agricultura",
+"nombre":".//div[@class='pad']/div/p[1]/font/span/strong/span/strong[text()]",
+"foto":".//div[@class='ms-rtestate-field']/img",
+"perfil":".//div[@class='pad']/div/p[@style='text-align:justify;'][position() < 5][text()]",
+"cargo":".//div[@class='pad']/h1[text()]"
+}},
+{
+"_id":"51",
+"entidad":"Ministerio de agricultura",
+"urls":["https://www.minagricultura.gov.co/contrataciones/Lists/Contratistas/default.aspx"],
+"t_estructura":"1",
+"contenedores":".//*[starts-with(@id,'0,')]",
+"info":{
+"nombre":".//td[3][text()]",
+"email":".//td[4][text()]"
+}},
+{
+"_id":"52",
+"urls":["https://www.minagricultura.gov.co/ministro/Paginas/Ministro.aspx"],
+"t_estructura":"1",
+"entidad":"Ministerio de agricultura",
+"info":{
+"nombre":".//div[@class='pad']/div/p[2]/span/span[text()]",
+"foto":".//*[@id='ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField']/p[1]/span/img",
+"perfil":".//div[@id='ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField']/div[text()]",
+"cargo":".//div[@class='pad']/h1[text()]"
+}},
+{
+"_id":"53",
+"urls":["http://www.mincit.gov.co/publicaciones/79/funcionarios_principales_del_ministerio_de_comercio_industria_y_turismo"],
+"t_estructura":"2",
+"entidad":"Ministerio de comercio industria y turismo",
+"contenedores":".//div[@class='pub']/table/tbody/tr",
+"info":{
+"perfil":".//td/img",
+"cargo":"substring-before(.//div[@class='pub']/table/tbody/tr[1]/td[1]/img/@longdesc,'.')"
+}},
+{
+"_id":"54",
+"urls":["http://www.mincultura.gov.co/ministerio/quienes-somos/directorio-principal/Paginas/default.aspx"],
+"t_estructura":"2",
+"entidad":"Ministerio de cultura",
+"contenedores":".//html/body/table/tbody/tr[position() > 1]",
+"info":{
+"nombre":".//td[2][text()]",
+"email":".//td[5][text()]",
+"telefono":".//td[4][text()]",
+"cargo":".//td[3][text()]",
+"dependencia":".//td[1][text()]"
+}},
+{
+"_id":"55",
+"urls":["http://www.mincultura.gov.co/ministra/Paginas/default.aspx"],
+"t_estructura":"1",
+"entidad":"Ministerio de cultura",
+"info":{
+"nombre":".//h1[@class='ms-rteElement-H1B'][text()]",
+"foto":".//div[@class='ms-rtestate-field']/img",
+"perfil":".//div[@class='ms-rtestate-field']/div/p[text()]",
+"cargo":".//div[@class='titleContent']/h1[text()]"
+}},
+{
+"_id":"56",
+"t_estructura":"1",
+"entidad":"Ministerio de transporte",
+"urls":["https://www.mintransporte.gov.co/Publicaciones/Ministerio/Dependencias/viceministro_de_transporte"],
+"info":{
+"nombre":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[1][text()]",
+"foto":".//img[@id='jpg6998']",
+"perfil":".//div[@class='pub']/div[2]/p[position() < 3 ][text()]",
+"email":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2]/a",
+"telefono":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2][text()]",
+"cargo":".//*[@id='infoPrincipal']/h1[text()]",
+"fecha_actualizacion":".//*[@id='infoPrincipal']/div[4][text()]"
+}},
+{
+"_id":"57",
+"urls":["https://www.mintransporte.gov.co/Publicaciones/grupo_de_coordinacion_sectorial/viceministro_de_infraestructura"],
+"t_estructura":"1",
+"entidad":"Ministerio de transporte",
+"info":{
+"nombre":".//div[@class='pub']/div[2]/h2[1][text()]",
+"foto":".//img[@id='jpg6999']",
+"email":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2]/a",
+"telefono":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2][text()]",
+"cargo":".//*[@id='infoPrincipal']/h1[text()]",
+"fecha_actualizacion":".//*[@id='infoPrincipal']/div[4][text()]"
+}},
+{
+"_id":"58",
+"urls":["https://www.mintransporte.gov.co/Publicaciones/Ministerio/Dependencias/secretaria_general"],
+"entidad":"Ministerio de transporte",
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='pub']/div[2]/h2[1][text()]",
+"foto":".//img[@id='jpg7041']",
+"perfil":".//div[@class='pub']/div[2]/p[1][text()]",
+"email":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2]/a",
+"telefono":".//*[@id='infoPrincipal']/div[1]/div[2]/h2[2][text()]",
+"cargo":".//*[@id='infoPrincipal']/h1[text()]",
+"fecha_actualizacion":".//*[@id='infoPrincipal']/div[4][text()]"
+}},
+{
+"_id":"59",
+"urls":["http://www.minvivienda.gov.co/sobre-el-ministerio/funcionarios"],
+"t_estructura":"2",
+"entidad":"Ministerio de vivienda",
+"contenedores":".//table[@class='ms-listviewtable']/tbody/tr",
+"info":{
+"nombre":".//td[3][text()]",
+"foto":".//td[2]/img",
+"perfil":".//td[5]/div/div[text()]",
+"cargo":".//td[4][text()]"
+}},
+{
+"_id":"60",
+"t_estructura":"1",
+"entidad":"Ministerio de vivienda",
+"urls":["http://www.minvivienda.gov.co/el-ministro/hoja-de-vida"],
+"info":{
+"nombre":".//span[@class='ms-rteFontSize-3']/strong[text()]",
+"foto":".//*[@id='ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField']/p/img",
+"perfil":".//div[@class='article-content']/div[2]/div[text()]"
+}},
+{
+"_id":"61",
+"entidad":"Ministerio de industria y telecomunicaciones",
+"urls":["http://www.mintic.gov.co/portal/604/w3-propertyvalue-541.html#"],
+"t_estructura":"1",
+"info":{
+"nombre":"substring-after(.//div[@class='figure cid-507 aid-1577 binary-imagen_1 format-jpg']/h5[text()],'-')",
+"foto":"//div[@class='figure cid-507 aid-1577 binary-imagen_1 format-jpg']/a/img",
+"perfil":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[1]/p[1][text()]",
+"cargo":"substring-before(.//div[@class='figure cid-507 aid-1577 binary-imagen_1 format-jpg']/h5[text()],'-')",
+"fecha_actualizacion":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/p[text()]"
+}},
+{
+"_id":"62",
+"urls":["http://www.mintic.gov.co/portal/604/w3-propertyvalue-542.html#"],
+"entidad":"Ministerio de industria y telecomunicaciones",
+"t_estructura":"1",
+"info":{
+"nombre":"substring-after(.//div[@id='article_i__pa_tabs_presentacionCuerpo_1']/div/h2[text()],'-')",
+"foto":".//div[@class='figure cid-507 aid-16387 binary-recurso_3 format-jpg']/a/img",
+"perfil":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[1]/p[1][text()]",
+"cargo":"substring-before(.//div[@id='article_i__pa_tabs_presentacionCuerpo_1']/div/h2[text()],'-')",
+"fecha_actualizacion":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/p[text()]"
+}},
+{
+"_id":"63",
+"t_estructura":"1",
+"urls":["http://www.mintic.gov.co/portal/604/w3-propertyvalue-543.html#"],
+"entidad":"Ministerio de industria y telecomunicaciones",
+"info":{
+"nombre":"normalize-space(.//div[@id='article_i__pa_tabs_presentacionCuerpo_1']/div/p/strong)",
+"foto":".//div[@class='figure cid-507 aid-1847 binary-recurso_1 format-jpg']/a/img",
+"perfil":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[2]/p[text()]",
+"cargo":"normalize-space(.//div[@id='article_i__pa_tabs_presentacionCuerpo_1']/div/p/strong)",
+"fecha_actualizacion":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/p[text()]"
+}},
+{
+"_id":"64",
+"urls":["http://www.mintic.gov.co/portal/604/w3-propertyvalue-6149.html#"],
+"t_estructura":"1",
+"entidad":"Ministerio de industria y telecomunicaciones",
+"info":{
+"nombre":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[2]/h2[text()]",
+"foto":".//div/a/img",
+"perfil":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[2]/p[text()]",
+"cargo":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/div[2]/p[1]/strong[text()]",
+"fecha_actualizacion":".//*[@id='article_i__pa_tabs_presentacionCuerpo_1']/p[text()]"
+}},
+{
+"_id":"65",
+"t_estructura":"1",
+"entidad":"Ministerio de trabajo",
+"urls":["http://www.mintrabajo.gov.co/web/guest/el-ministerio/ministra-del-trabajo"],
+"info":{
+"nombre":".//article[@class='BoxNewsMintraHome2']/h2[text()]",
+"foto":".//article[@class='BoxNewsMintraHome2']/figure/img",
+"perfil":".//article[@class='BoxNewsMintraHome2']/div/p[text()]",
+"cargo":".//section[@class='news-mintrabajo borde-Azul-100']/h1[text()]",
+"fecha_actualizacion":".//*[@id='demo'][text()]"
+}},
+{
+"_id":"66",
+"t_estructura":"1",
+"entidad":"Ministerio de trabajo",
+"urls":["http://www.mintrabajo.gov.co/web/guest/empleo-y-pensiones/viceministro"],
+"info":{
+"nombre":".//article[@class='BoxNewsMintraHome2']/h2[text()]",
+"foto":".//article[@class='BoxNewsMintraHome2']/figure/img",
+"perfil":".//article[@class='BoxNewsMintraHome2']/div/p[text()]",
+"cargo":".//section[@class='news-mintrabajo borde-Azul-100']/h1[text()]",
+"fecha_actualizacion":".//*[@id='demo'][text()]"
+}},
+{
+"_id":"67",
+"urls":["http://www.mintrabajo.gov.co/web/guest/relaciones-laborales/viceministra"],
+"t_estructura":"1",
+"entidad":"Ministerio de trabajo",
+"info":{
+"nombre":".//article[@class='BoxNewsMintraHome2']/h2[text()]",
+"foto":".//article[@class='BoxNewsMintraHome2']/figure/img",
+"perfil":".//article[@class='BoxNewsMintraHome2']/div/p[text()]",
+"cargo":".//section[@class='news-mintrabajo borde-Azul-100']/h1[text()]",
+"fecha_actualizacion":".//*[@id='demo'][text()]"
+}},
+{
+"_id":"68",
+"urls":["http://www.cancilleria.gov.co/ministerio/viceministra-relaciones-exteriores"],
+"entidad":"Cancillería",
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='field-item even']/p[1]/span[2][text()]",
+"perfil":".//div[@class='field-item even']/p[text()]",
+"cargo":"substring-before(.//div[@class='field-item even']/p[1]/span[text()],'-')",
+"fecha_actualizacion":".//*[@id='Enlaces_Footer']/ul/li[4][text()]"
+}},
+{
+"_id":"69",
+"urls":["http://www.cancilleria.gov.co/ministra"],
+"t_estructura":"1",
+"entidad":"Cancillería",
+"info":{
+"nombre":".//div[@class='field-item even']/h3[text()]",
+"perfil":".//div[@class='field-item even']/p[text()]",
+"fecha_actualizacion":".//*[@id='Enlaces_Footer']/ul/li[4][text()]"
+}},
+{
+"_id":"70",
+"urls":["http://www.cancilleria.gov.co/ministerio/viceministro-asuntos-multilaterales"],
+"t_estructura":"1",
+"entidad":"Cancillería",
+"info":{
+"nombre":"substring-after(.//div[@class='field-item even']/h3[2][text()],'-')",
+"perfil":".//div[@class='field-item even']/p[text()]",
+"cargo":"substring-before(.//div[@class='field-item even']/h3[2][text()],'-')",
+"fecha_actualizacion":".//*[@id='Enlaces_Footer']/ul/li[4][text()]"
+}},
+{
+"_id":"71",
+"t_estructura":"1",
+"entidad":"Cancillería",
+"urls":["http://www.cancilleria.gov.co/ministerio/secretario-general"],
+"info":{
+"nombre":"substring-after(.//div[@class='field-item even']/table/tbody/tr/td/h3[2][text()],'-')",
+"perfil":".//div[@class='field-item even']/table/tbody/tr/td/h3[2][text()]",
+"cargo":"substring-before(.//div[@class='field-item even']/table/tbody/tr/td/h3[2][text()],'-')",
+"fecha_actualizacion":".//*[@id='Enlaces_Footer']/ul/li[4][text()]"
+}},
+{
+"_id":"72",
+"urls":["https://www.minminas.gov.co/el-ministro"],
+"entidad":"Ministerio de minas",
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/img",
+"perfil":".//div[@class='journal-content-article']/p[1][text()]",
+"cargo":".//div[@class='journal-content-article']/h4[text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"73",
+"t_estructura":"1",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/oficina-asesora-juridica"],
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/h3[1]/span/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"74",
+"t_estructura":"1",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/oficina-de-control-interno"],
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h4[text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"75",
+"entidad":"Ministerio de minas",
+"t_estructura":"1",
+"urls":["https://www.minminas.gov.co/oficina-de-planeacion-y-gestion-internacional"],
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"76",
+"t_estructura":"1",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/oficina-de-asuntos-ambientales-y-sociales"],
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"77",
+"urls":["https://www.minminas.gov.co/oficina-de-asuntos-regulatorios-y-empresariales"],
+"entidad":"Ministerio de minas",
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1]/span[text()]",
+"foto":".//div[@class='journal-content-article']/p/span/img",
+"perfil":".//div[@class='journal-content-article']/p[2][text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"78",
+"urls":["https://www.minminas.gov.co/viceministros"],
+"t_estructura":"1",
+"entidad":"Ministerio de minas",
+"info":{
+"nombre":".//div[@id='viceministro_minas']/img/@alt[text()]",
+"foto":".//div[@id='viceministro_minas']/img",
+"perfil":".//div[@id='viceministro_minas']/p[text()]",
+"cargo":".//div[@id='viceministro_minas']/h3[1][text()]"
+}},
+{
+"_id":"79",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/viceministros"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@id='viceministro_energia']/h3[1][text()]",
+"foto":".//div[@id='viceministro_energia']/img",
+"perfil":".//div[@id='viceministro_energia']/p[text()]",
+"cargo":".//div[@id='viceministro_energia']/h3[2][text()]"
+}},
+{
+"_id":"80",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/secretaria-general"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/h3[1]/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"81",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/direccion-mineria-empresarial"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"82",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/direccion-de-formalizacion-minera"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/h3[1]/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"83",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/direccion-de-energia-electrica"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"84",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/direccion-de-hidrocarburos"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/h3[1]/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"85",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/subdireccion-administrativa-y-financiera"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article']/h3[1][text()]",
+"foto":".//div[@class='journal-content-article']/p[1]/img",
+"perfil":".//div[@class='journal-content-article']/p[text()]",
+"cargo":".//div[@class='journal-content-article']/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article']/h2[text()]"
+}},
+{
+"_id":"86",
+"entidad":"Ministerio de minas",
+"urls":["https://www.minminas.gov.co/subdireccion-de-talento-humano"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='journal-content-article]/h3[1][text()]",
+"foto":".//div[@class='journal-content-article]/img",
+"perfil":".//div[@class='journal-content-article]/p[text()]",
+"cargo":".//div[@class='journal-content-article]/h3[2][text()]",
+"dependencia":".//div[@class='journal-content-article]/h2[text()]"
+}},
+{
+"_id":"87",
+"entidad":"Ministerio de minas",
+"urls":["https://www.mineducacion.gov.co/portal/Ministerio/Informacion-Institucional/355837:La-Ministra"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@id='article_i__MEN_ar_articuloCompleto_1']/h2[1][text()]",
+"foto":".//div[@id='article_i__MEN_ar_articuloCompleto_1']/div/a/img",
+"perfil":".//div[@id='article_i__MEN_ar_articuloCompleto_1']/p[text()]",
+"cargo":".//*[@id='article_i__MEN_ar_titulo_1']/h1[text()]"
+}},
+{
+"_id":"88",
+"entidad":"Ministerio de minas",
+"urls":["http://www.minhacienda.gov.co/HomeMinhacienda/faces/Ministerio/AcercaMinisterio/EstructuraTalentoHumano/ServidoresPublicos/DirJefeOfic?"],
+"t_estructura":"1",
+"Contenedores":".//div[@class='panel panel-default']",
+"info":{
+"cargo":".//div/h3[text()]",
+"nombre":".//ul/li/h3[text()]",
+"email":".//ul/li[3]/a",
+"perfil":".//ul/li[5]/a",
+"telefono":".//ul/li[4][text()]"
+}},
+{
+"_id":"89",
+"entidad":"Ministerio de hacienda",
+"urls":["http://www.minhacienda.gov.co/HomeMinhacienda/faces/PerfilMinistro","http://www.minhacienda.gov.co/HomeMinhacienda/faces/Menus/menuo/perfilvicegeneral","http://www.minhacienda.gov.co/HomeMinhacienda/faces/Menus/menuo/perfilvicetecnico","http://www.minhacienda.gov.co/HomeMinhacienda/faces/Menus/menuo/perfilsecretariogeneral"],
+"t_estructura":"1",
+"info":{
+"nombre":".//font/span[text()]",
+"foto":".//img[@class='af_image']",
+"perfil":".//div[@class='af_richTextEditor_content']/p[text()]",
+"cargo":"substring-after(.//span[@class='titulo_pagina'][text()],'Perfil del')"
+}},
+{
+"_id":"93",
+"entidad":"Presidencia",
+"urls":["http://es.presidencia.gov.co/presidencia/Paginas/presidente.aspx"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@class='pageLead'][text()]",
+"foto":".//div[@class='fotoDPage']/div/div/div/img",
+"perfil":".//div[@id='CntDinternaFotoD']/div[2]/p[text()]",
+"cargo":".//h1[@class='titlePage'][text()]"
+}},
+{
+"_id":"94",
+"entidad":"Vicepresidencia",
+"urls":["http://www.vicepresidencia.gov.co/vicepresidencia/Paginas/vicepresidente.aspx"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@id='ctl00_PlaceHolderMain_ctl11__ControlWrapper_RichHtmlField']/h2[text()]",
+"foto":".//*[@id='ctl00_PlaceHolderMain_ctl09__ControlWrapper_RichImageField']/div/img",
+"perfil":".//div[@id='ctl00_PlaceHolderMain_ctl11__ControlWrapper_RichHtmlField']/div[text()]",
+"cargo":".//div[@id='layout-3-conten-i-info-Titulo']/h1[text()]"
+}},
+{
+"_id":"95",
+"entidad":"DNP",
+"urls":["https://www.dnp.gov.co/direccion-general/Paginas/Perfil.aspx"],
+"t_estructura":"1",
+"info":{
+"nombre":".//div[@id='ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField']/p/span[2][text()]",
+"foto":".//div[@id='ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField']/div[4]/img",
+"perfil":".//div[@id='ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField']/div[4]/div[text()]",
+"cargo":".//div[@id='contentPortal']/h1[text()]"
+}},
+{
+"_id":"98",
+"entidad":"Organizaciones solidarias",
+"urls":["http://www.orgsolidarias.gov.co/la-entidad/qui%C3%A9nes-somos/perfil-del-director"],
+"t_estructura":"1",
+"info":{
+"nombre":"substring-before(.//div[@class='content']/div/p,',')",
+"perfil":".//div[@class='content']/div/p"
+}},
+{
+"_id":"99",
+"entidad":"SIGEP",
+"urls":["https://www.funcionpublica.gov.co/dafpIndexerBHV/"],
+"root":"https://www.funcionpublica.gov.co/dafpIndexerBHV/",
+"t_estructura":"5",
+"info":{
+}},
+{
+"_id":"100",
+"entidad":"ASPIRANTESPRESIDENCIA",
+"urls":["https://aspirantes.presidencia.gov.co/"],
+"root":"https://aspirantes.presidencia.gov.co/",
+"t_estructura":"6",
+"info":{
+}}
+]

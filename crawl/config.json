@@ -1,0 +1,13 @@
+{
+	"MONGO": "mongodb://localhost",
+	"REDIS":{
+		"HOST":"localhost",
+		 "PORT":6379
+		},
+	"NEO4J":{
+		"USER":"userneo4j",
+		"PW":"****",
+		"CYPHER_URL":"http://localhost:7474/db/data/",
+		"URL":"localhost:7474"
+	}
+}

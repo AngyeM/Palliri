@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Gesdatos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/select2.min.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+  	<link rel="stylesheet" href="../static/css/app.css">
+  	<link rel="icon" href="../static/img/icon.png">
+  	<link rel="stylesheet" href="../static/css/style.css">
+  	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+{% block head %}
+  {% include 'head.html' %}
+  {% endblock %}
+  {% include 'navbar.html' %}
+	<div  id="main">
+		<div class="container">
+		<h2 class="labeled-title">Gesdatos</h2>
+		<div class="row">
+		  <div class="col-sm-4 col-md-4">
+		  	<p align="justify" class="bg-secondary" style="color:#398da4"><i class="fa fa-sitemap fa-lg" aria-hidden="true"></i> <strong> Áreas de Interés</strong></p>
+			<ul>
+				<li>Bases de Datos Relacionales
+				</li><li>Bases de Datos No Relacionales (NoSQL)
+				</li><li>Bodegas de Datos e Inteligencia de Negocios (DW/BI)
+				</li><li>Minería de Datos e Inteligencia artificial (IA)
+				</li><li>Procesamiento de Lenguaje Natural y Lingüística Computacional (NPL – LC)
+				</li><li>Big Data y Ciencia de los datos (Data Science)
+				</li>
+			</ul>
+			<br>
+			<br>
+			<p align="justify" class="bg-secondary" style="color:#398da4"><i class="fa fa-users fa-lg" aria-hidden="true"></i> <strong> Miembros participantes en el proyecto</strong></p>
+			<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<h4>Investigador</h4>
+				<i class="fa fa-lightbulb-o fa-lg" style="color:#398da4" aria-hidden="true"></i> Angye Malagon
+			</div>
+			<div class="col-sm-6 col-md-6">
+				<h4>Director</h4>
+				<i class="fa fa-lightbulb-o fa-lg" style="color:#398da4" aria-hidden="true"></i> Ph.D Sonia Ordoñez
+			</div>
+		</div>
+		  </div>
+		  <div class="col-sm-8 col-md-8">
+		  	<p align="justify" class="bg-secondary" style="color:#398da4"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> <strong> Reseña </strong></p>
+		  	<p align="justify">El grupo de Investigación GESDATOS fue creado en el 2003 <strong>(Número COL0031619 de Colciencias)</strong>  con el objeto principal de investigar en el área de la gestión de datos en memoria principal y secundaria.  Posteriormente el grupo amplio su temática a una conceptualización más amplia de la gestión que contextualiza el cómo, el porqué y el para qué de los datos en el marco de la información.</p>
+			<br>
+			<p align="justify">Los datos, como unidad básica de la información son el fundamento del saber y el conocer. El conocimiento codificado, se ha constituido en una de las bases más sólidas de la posibilidad de gestión del entorno por parte de los seres humanos. En las últimas etapas de la humanidad, luego del desarrollo de la escritura, la producción de información codificada se ha multiplicado de forma acelerada hasta el punto que hoy se contabiliza en  yottabyte YB (1000<sup>8</sup> bytes) obligando, a la búsqueda de nuevas formas de gestión que faciliten la consulta,  la interrelación y el análisis de tan gigantesco volumen de datos. El desarrollo de mecanismos de almacenamiento digital y de velocidad de procesamiento ha posibilitado todo un conjunto de técnicas que incluso permiten la interpretación de algunos aspectos del conocimiento no codificado. Esto abre las perspectivas para la interpretación de nuevas colecciones de información que hacen que la gestión transversal de dichas colecciones sea  transversal a todas las disciplinas.</p>
+			<br>
+			<p align="justify">La gestión de los datos involucra su organización y análisis. Las bases de datos y los repositorios de datos se han constituido en el fundamento de la organización de los mismos. Para el análisis aparecen técnicas computacionales como la inteligencia artificial, la minería de datos, la simulación y con ello todas las disciplinas que se derivan. </p>
+		  </div>
+		</div>
+	</div>
+	</div>
+ {% include 'footer.html' %}  
+<!--===============================================================================================-->
+	<script src="../static/js/jquery.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/select2.min.js"></script>
+</body>
+</html>

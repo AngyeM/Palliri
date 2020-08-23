@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Palliri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/dist/popoto.min.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="icon" href="../static/img/icon.png">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <style>
+        #popoto-graph:fullscreen {
+            width: 100%;
+            height: 100%;
+        }
+
+        #popoto-graph:-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+
+        #popoto-graph:-moz-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+
+        #popoto-graph:-ms-fullscreen {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="ppt-body">
+  {% block head %}
+  {% include 'head.html' %}
+  {% endblock %}
+  {% include 'navbar.html' %}
+  <div id="main">
+    <section class="ppt-section-main">
+        <div class="ppt-container-graph">
+            <nav class="ppt-taxo-nav">
+                <div id="saves">
+                    <h3 class="ppt-header-span app-title">Consultas Pre - establecidas:</h3><br><br>
+                    <ul class="ppt-taxo-ul">
+                        <li id="save-1" value="Person"><i class="fa fa-plus-circle" style="color: #fc8536" aria-hidden="true"></i><span
+                                class="ppt-label"> Funcionarios que estudiaron en la Universidad Central</span></li>
+                        <li id="save-2" value="Entity"><i class="fa fa-plus-circle" style="color: #fc8536" aria-hidden="true"></i><span
+                                class="ppt-label"> Funcionarios relacionados con la Fiscalía</span></li>
+                        {% if key %}
+                        <li id="Funcionario" value="Person"><i class="fa fa-plus-circle" style="color: #fc8536" aria-hidden="true"></i><span
+                        class="ppt-label"> Ver a {{key}}</span></li>
+                        {% endif %}
+                    </ul>
+                    <hr>
+                    <br>
+                </div>
+            </nav>
+            <div id="popoto-graph" class="ppt-div-graph">
+            </div>
+        </div>
+     
+        <div class="ppt-section-header">
+            Resultados <span id="result-total-count" class="ppt-count"></span>
+        </div>
+
+        <div id="popoto-results" class="ppt-container-results">
+        </div>
+
+    </section>
+</div>
+ {% include 'footer.html' %}
+
+<!---------------------->
+<!-- Required scripts -->
+
+<!-- Jquery is only used in popoto.js to send ajax POST request on Neo4j REST API -->
+<!-- This dependency will definitely be removed in future releases -->
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<script src="../static/js/select2.min.js"></script>
+<script src="https://unpkg.com/d3" charset="utf-8"></script>
+<script src="../static/dist/popoto.js"></script>
+<script>
+    /**
+     * URL used to access Neo4j REST API to execute queries.
+     * Update this parameter to your running server instance.
+     *
+     * For more information on Neo4J REST API the documentation is available here: http://neo4j.com/docs/stable/rest-api-cypher.html
+     */
+    popoto.rest.CYPHER_URL = "http://localhost:7474/db/data/transaction/commit";
+    popoto.tools.TOGGLE_TAXONOMY = false;
+    popoto.tools.SAVE_GRAPH = true;
+    var count = 4;
+    popoto.graph.onSave(function (graph) {
+        // generate a unique id
+        var id = "save-" + count++;
+        // save it in JavaScript "saves" var
+        saves[id] = graph;
+
+        // Update page with the new saved graph item in list with a on click event to illustrate how it can be used.
+        var li = d3.select("#saves")
+            .selectAll("ul")
+            .append("li")
+            .attr("id", id)
+            .on("click", onClickSavedGraph);
+
+        li.append("span")
+            .attr("class", "ppt-icon ppt-save-tag")
+            .html('&nbsp;');
+
+        li.append("span")
+            .attr("class", "ppt-label")
+            .attr("title", "Load Graph")
+            .text(id);
+        console.log(saves);
+    });
+    /**
+     * Add this authorization property if your Neo4j server uses basic HTTP authentication.
+     * The value of this property must be "Basic <payload>", where "payload" is a base64 encoded string of "username:password".
+     *
+     * "btoa" is a JavaScript function that can be used to encode the user and password value in base64 but it is recommended to directly use the Base64 value.
+     *
+     *  For example Base64 encoded value of "neo4j:password" is "bmVvNGo6cGFzc3dvcmQ="
+     *  Note that it is not a safe way to keep credentials as anyone can have access to this code in your web page.
+     */
+    popoto.rest.AUTHORIZATION = "Basic " + btoa("neo4j:8112");
+
+    /**
+     * Define the Label provider you need for your application.
+     * This configuration is mandatory and should contain at least all the labels you could find in your graph model.
+     *
+     * In this version only nodes with a label are supported.
+     *
+     * By default If no attributes are specified Neo4j internal ID will be used.
+     * These label provider configuration can be used to customize the node display in the graph.
+     * See www.popotojs.com or example for more details on available configuration options.
+     */
+    popoto.provider.node.Provider = {
+        "Person": {
+            "returnAttributes": ["name"],
+            "constraintAttribute": "name",
+            "isAutoLoadValue":true,
+            "getDisplayType": function (node) {
+            return popoto.provider.node.DisplayTypes.IMAGE;
+            },
+            "autoExpandRelations": true,
+        },
+        "Entity": {
+            "returnAttributes": ["name"],
+            "constraintAttribute": "name",
+            "isAutoLoadValue":true,
+            "autoExpandRelations": true,
+            "getDisplayType": function (node) {
+                return popoto.provider.node.DisplayTypes.IMAGE;
+            },
+        }
+    };
+    // New conf
+    popoto.query.COLLECT_RELATIONS_WITH_VALUES = true;
+    popoto.provider.node.LABELS=[]
+     popoto.graph.USE_FIT_TEXT = true;
+    // Popoto links provider configuration
+    
+    /**
+     * Here a listener is used to retrieve the total results count and update the page accordingly.
+     * This listener will be called on every graph modification.
+     */
+    popoto.result.onTotalResultCount(function (count) {
+        document.getElementById("result-total-count").innerHTML = "(" + count + ")";
+    });
+
+
+    popoto.provider.link.Provider = {
+        "getColor": function (link) {
+            if (link.type === popoto.graph.link.LinkTypes.RELATION 
+                || link.type === popoto.graph.link.LinkTypes.SEGMENT) {
+                switch (link.label) {
+                    case "WORK_IN":
+                        return "#68BDF6";
+                    case "STUDY_IN":
+                        return "#6DCE9E";
+                    case "APPLY_TO":
+                        return "#FF756E";
+                    default :
+                        return "#525863"
+                }
+            } else {
+                return "#A5ABB6";
+            }
+        },
+        "getTextValue": function (link,aditional_text) {
+            if (link.type === popoto.graph.link.LinkTypes.RELATION 
+                || link.type === popoto.graph.link.LinkTypes.SEGMENT) {
+                console.log("Aqui modificar ",aditional_text)
+                switch (link.label) {
+                    case "WORK_IN":
+                        return "Trabajó en";
+                    case "STUDY_IN":
+                        return "Estudió en";
+                    case "APPLY_TO":
+                        return "Se postuló";
+                    default :
+                        return link.label
+                }
+            } else {
+                return link.label;
+            }
+        },
+    };
+
+    popoto.provider.node.DEFAULT_PROVIDER.getColor = function (node) {
+        if (node.type !== popoto.graph.node.NodeTypes.ROOT) {
+            var linknode = node;
+            if (node.type === popoto.graph.node.NodeTypes.VALUE) {
+                linknode = node.parent;
+            }
+            var color = "#EC9A29";
+            if (linknode.parentRel !== undefined) {
+                color = popoto.provider.link.getColor({
+                    label: linknode.parentRel,
+                    source: linknode.parent,
+                    target: linknode,
+                    type: popoto.graph.link.LinkTypes.RELATION
+                });
+            }
+            return color;
+        } else {
+            return "#EC9A29";
+        }
+    };
+
+    
+    
+
+    
+    //popoto.query.RESULTS_PAGE_SIZE = 100;
+
+
+    popoto.logger.LEVEL = popoto.logger.LogLevels.DEBUG;
+
+    var saves = {
+        "save-1": {
+            label: "Person",
+            rel: [
+                {
+                    label: "STUDY_IN",
+                    target: {
+                        label: "Entity",
+                        value: {
+                            name: "UNIVERSIDAD CENTRAL"
+                        }
+                    }
+                }
+            ]
+        },
+        "save-2": {
+            label: "Person",
+            rel: [
+                {
+                    label: "WORK_IN",
+                    target: {
+                        label: "Entity",
+                        value: [
+                            {
+                                name: "Fiscalia"
+                            },
+                        ]
+                    }
+                }
+            ]
+        },
+        "Funcionario": {
+            label: "Person",
+            rel: [
+                {
+                    label: "WORK_IN",
+                    target: {
+                        label: "Entity"
+                    }
+                },{
+                    label: "STUDY_IN",
+                    target: {
+                        label: "Entity"
+                    }
+                },{
+                    label: "APPLY_TO",
+                    target: {
+                        label: "Entity"
+                    }
+                }
+            ],
+            value:{
+                name:'{{ key }}'
+            }
+        },
+    };
+
+
+   
+    d3.select("#saves").selectAll("li").on("click", onClickSavedGraph);
+
+    function onClickSavedGraph() {
+        // Update Graph title:
+        // d3.select("#save-header").text(d3.select(this).select(".ppt-label").text());
+
+        popoto.graph.mainLabel = saves[this.id];
+        popoto.tools.reset();
+    }
+    if('{{ key }}'){
+        popoto.start(saves['Funcionario']);    
+    }else{
+        popoto.start("Person");    
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/app.css">
+  <link rel="icon" href="../static/img/icon.png">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Palliri crawler</title>
+</head>
+
+<body>
+
+  <!-- HEAD SECTION -->
+  <div class="row">
+    <div class="col-md-4"><img src="../static/img/logo2.png" style="margin-left: 50px;" width="150px" alt="Palliri icon"></div>
+    <div class="col-md-8" style="padding-top:70px ">
+      <span class="text-right text-uppercase align-text-bottom" style="font-family: 'Segoe UI',Arial,sans-serif;letter-spacing: 4px;"> Información de perfiles académicos y laborales de funcionarios públicos de Colombia</span>
+    </div>
+  </div>
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fa fa-2x fa-bars"></i>
+        </button>
+      </div>
+      <div class="p-4 pt-5">
+        <h1><a class="logo">Palliri</a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="#">Quienes somos</a>
+          </li>
+          <li><a href="#">Manual de usuario</a></li>
+          <li>
+            <a href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- MAIN SECTION -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <div class="col-md-12">
+        <div class="col-md-2">
+          Filtros de esto 
+          ...
+          <br>
+          <a href="#">Descarga resultados</a>
+         <form class="search" method="post" action="{{ url_for('search_item') }}">
+         <label for="items">Buscar por:</label>
+            <select name="items" id="items">
+              <option value="person">Persona</option>
+              <option value="entity">Entidad</option>
+            </select>
+            <input type="text" placeholder="Palabras de referencia" name="keywords">
+            <button type="submit"><i class="fa fa-search"></i>Buscar
+            </button>
+        </form>
+            {% if result %}
+            {%for item in range(0, len)%} 
+            <a href="{{ url_for('get_item',keyword=result[item]) }}">{{result[item]}}</a> 
+            {%endfor%} 
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+          <label for="comment">Resultados</label>
+          <textarea class="form-control" rows="50" id="comment">
+           
+          </textarea>
+        </div>
+      </div>
+      <!--
+      <div id="descarga" class="input-group container row center-block" style="display: none;">
+        <div class="col-sm-6">
+          <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60%"
+            aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% Complete (info)
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary">Descargar</button>
+        </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+<!-- FOOTER -->
+    <footer class="container-fluid row center-block">
+      <div class="col-sm-3 col-md-offset-1">
+        <div  class="text-center">
+          <img src="../static/img/team.png" class="img-circle" alt="icon team" width="70px">
+          <h4 class="text-center">Gesdatos <br> <small>Grupo de investigación - Universidad Distrital <br> 2017 </small></h4>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-offset-1">
+        <div  class="text-center">
+          <img src="../static/img/question.png" class="img-circle" alt="icon team" width="70px">
+          <h4 class="text-center">Sobre nosotros</h4>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-offset-1">
+        <div  class="text-center">
+          <img src="../static/img/email.png" class="img-circle" alt="icon team" width="70px">
+          <h4 class="text-center">Contacto</h4>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

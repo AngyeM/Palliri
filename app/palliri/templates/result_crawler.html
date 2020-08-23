@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/app.css">
+  <link rel="icon" href="../static/img/icon.png">
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+  <title>Palliri</title>
+</head>
+
+<body>
+
+  {% block head %}
+  {% include 'head.html' %}
+  {% endblock %}
+  {% include 'navbar.html' %}
+
+  
+    <div id="main" class="container-fluid">
+      <div class="col-md-12 col-lg-12">
+        <div class="col-md-10 col-lg-10">
+          <h2 class="labeled-title">Resultados</h2>
+           {% if result2 %}
+            <div class="json_result">
+              <code ><pre  id="textresult" class="prettyprint linenums">{{ result2 }}</pre></code>  
+            </div>
+            {% endif %}
+        </div>
+        <div  class="col-md-2 col-lg-2">
+          <div class="align-center">
+            <a  href="{{ url_for('search') }}" class="btn btn-icon btn-block" style="background-color: #398da4;text-align: left;padding-left: 20px">
+           <i class="fa fa-search-plus fa-2x" aria-hidden="true" style="color:white"></i> <span class="app-title" style="color:white; font-size: 20px"> Buscar</span>
+          </a>
+          </div>
+          <div class="align-center">
+            <br>
+            <a  onclick="download()" class="btn btn-icon btn-block" style="text-align: left;padding-left: 20px;background-color: #f5f5f5">
+             <i class="fa fa-chevron-circle-down fa-2x" aria-hidden="true" style="color:#398da4"></i> <span class="app-title" style="font-size: 20px"> Descargar</span>
+            </a>
+          </div>
+          
+          
+        </div>
+      </div>
+      <br>
+
+    </div>
+ {% include 'footer.html' %}
+  </body>
+
+
+   
+</html>

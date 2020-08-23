@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/app.css">
+  <link rel="icon" href="../static/img/icon.png">
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+  <title>Palliri</title>
+</head>
+
+<body>
+
+  {% block head %}
+  {% include 'head.html' %}
+  {% endblock %}
+  {% include 'navbar.html' %}
+    <div id="main" class="container">
+      <div class="col-md-12">
+        <h2 class="labeled-title">Nueva búsqueda</h2>
+         <form method="post" action="{{ url_for('search_item') }}">
+          <div class="form-group row">
+            <label for="items" class="col-sm-2 col-form-label">Buscar por</label>
+            <div class="col-sm-3">
+              <select class="form-control" name="items" id="items">
+                <option value="person">Funcionario</option>
+                <option value="entity">Entidad</option>
+              </select>
+            </div>
+            <div class="col-sm-5">
+              <input type="text" class="form-control"  placeholder="Palabras de referencia" name="keywords" id="keywords">
+            </div>
+            <div class="col-sm-2">
+              <button type="submit" class="btn btn-icon btn-block" style="background-color: #398da4;color: white"><i class="fa fa-search"></i>  Buscar
+            </div>
+          </div>
+            </button>
+        </form>
+            {% if result2 %}
+            <br>
+            <h4 class="labeled-title">Resultados para funcionario</h4>
+            <ul class="list-group">
+              {%for item in result2 %} 
+                <li class="list-group-item" style="min-height: 90px;">
+                    <span style="vertical-align: middle;">{{item}}</span>
+                  
+                    <a href="{{ url_for('get_item_graph',keyword=item) }}" style="float: right" class="btn btn-icon input-block-level" title="Ver grafo">
+                      <img src="../static/img/link.png" style="height: 50px"> 
+                    </a>
+                  
+                  
+                    <a href="{{ url_for('get_item',keyword=item) }}" style="float: right" class="btn btn-icon input-block-level" title="Ver resultados del crawler">
+                      <img src="../static/img/json-file.png"  style="height: 50px"> 
+                    </a> 
+                  
+                </li>
+            {%endfor%}
+            </ul>
+            {% else %}
+            <div class="alert alert-info fade in">
+             No se encontraron coincidencias, intente nuevamente
+           </div>
+            {% endif %}
+        </div>
+      </div>
+      {% include 'footer.html' %}  
+    </div>
+
+  </body>
+  Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+   
+</html>

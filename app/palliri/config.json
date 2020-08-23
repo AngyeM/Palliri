@@ -1,0 +1,19 @@
+{
+	"MONGO": "mongodb://localhost",
+	"REDIS":{
+		"HOST":"localhost",
+		"PORT":6379
+	},
+	"NEO4J":{
+		"CREDENTIALS":"userneo4j:****",
+		"CYPHER_URL":"http://localhost:7474/db/data/transaction/commit"
+	},
+	"MAIL":{
+		"MAIL_SERVER":"smtp.gmail.com",
+        "MAIL_PORT":  465,
+        "MAIL_USE_SSL":  true,
+        "MAIL_USERNAME":  "***@gmail.com",
+        "MAIL_PASSWORD":  "****",
+	    "MAIL_DEFAULT_SENDER":"****@gmail.com"
+	}
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contacto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/select2.min.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+  	<link rel="stylesheet" href="../static/css/app.css">
+  	<link rel="icon" href="../static/img/icon.png">
+  	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+{% block head %}
+  {% include 'head.html' %}
+  {% endblock %}
+  {% include 'navbar.html' %}
+	<div  id="main">
+		<div class="container">
+		<h2 class="labeled-title">Contáctenos</h2>
+		<br>
+		<h4>
+			Gracias
+			{% if name %}
+			<strong>{{name}}</strong>
+			{% endif %} , por tomarte el tiempo de escribirnos, pronto daremos respuesta vía correo electrónico.
+		</h4>
+		<div class="float-right"><a href="{{ url_for('init') }}"><i class="fa fa-undo" aria-hidden="true"></i> Volver al inicio</a></div>
+		
+	</div>
+	</div>
+ {% include 'footer.html' %}  
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/select2.min.js"></script>
+</body>
+</html>

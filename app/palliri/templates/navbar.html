@@ -1,0 +1,46 @@
+    <button  onclick="openNav()" class="btn btn-default">
+     <i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true" style="color:#398da4"></i> <span class="app-title">Palliri</span>
+    </button>
+  <div id="mySidenav" class="sidenav">    
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="list-unstyled components mb-5">
+      <li><a href="{{url_for('init')}}">Buscar</a></li>
+      <li><a href="{{url_for('graph')}}">Ver grafo</a></li>
+      <li>
+        <a href="{{url_for('contact')}}">Contacto</a>
+      </li>
+      <li>
+        <a href="{{url_for('about')}}">Gesdatos</a>
+      </li>
+    </ul>
+  </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+  document.getElementById("footer_app").style.marginLeft = "200px";
+  document.getElementById("header_app").style.marginLeft = "200px";
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("footer_app").style.marginLeft = "0";
+  document.getElementById("header_app").style.marginLeft = "0";
+}
+function open_modal(modalid){
+    $("#modal_ppt-path_"+modalid).modal('show')
+    $('.modal-backdrop').removeClass("modal-backdrop");  
+}
+function download() {
+    //var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify());
+    //var textToWrite = document.getElementById('textresult').innerText;
+    var textToWrite = "Hola";
+    var dlAnchorElem = document.getElementById('downloadAnchorElem');
+    dlAnchorElem.setAttribute("href",dataStr);
+    dlAnchorElem.setAttribute("download", "palliri.json");
+    dlAnchorElem.click();
+    }
+</script>
